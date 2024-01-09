@@ -60,66 +60,115 @@ int main()
 
 	glEnable(GL_DEPTH_TEST);
 
-	Shader lightingShader("C:/dev/learn-opengl/learn-opengl/colors.vs",
-		"C:/dev/learn-opengl/learn-opengl/colors.fs");
+	Shader lightingShader("C:/dev/learn-opengl/learn-opengl/basic_lighting.vs",
+		"C:/dev/learn-opengl/learn-opengl/basic_lighting.fs");
 
 	Shader lightCubeShader("C:/dev/learn-opengl/learn-opengl/light_cube.vs",
 		"C:/dev/learn-opengl/learn-opengl/light_cube.fs");
 	
+	/*float vertices[] = {
+		-0.5f, -0.5f, -0.5f,
+		 0.5f, -0.5f, -0.5f,
+		 0.5f,  0.5f, -0.5f,
+		 0.5f,  0.5f, -0.5f,
+		-0.5f,  0.5f, -0.5f,
+		-0.5f, -0.5f, -0.5f,
+
+		-0.5f, -0.5f,  0.5f,
+		 0.5f, -0.5f,  0.5f,
+		 0.5f,  0.5f,  0.5f,
+		 0.5f,  0.5f,  0.5f,
+		-0.5f,  0.5f,  0.5f,
+		-0.5f, -0.5f,  0.5f,
+
+		-0.5f,  0.5f,  0.5f,
+		-0.5f,  0.5f, -0.5f,
+		-0.5f, -0.5f, -0.5f,
+		-0.5f, -0.5f, -0.5f,
+		-0.5f, -0.5f,  0.5f,
+		-0.5f,  0.5f,  0.5f,
+
+		 0.5f,  0.5f,  0.5f,
+		 0.5f,  0.5f, -0.5f,
+		 0.5f, -0.5f, -0.5f,
+		 0.5f, -0.5f, -0.5f,
+		 0.5f, -0.5f,  0.5f,
+		 0.5f,  0.5f,  0.5f,
+
+		-0.5f, -0.5f, -0.5f,
+		 0.5f, -0.5f, -0.5f,
+		 0.5f, -0.5f,  0.5f,
+		 0.5f, -0.5f,  0.5f,
+		-0.5f, -0.5f,  0.5f,
+		-0.5f, -0.5f, -0.5f,
+
+		-0.5f,  0.5f, -0.5f,
+		 0.5f,  0.5f, -0.5f,
+		 0.5f,  0.5f,  0.5f,
+		 0.5f,  0.5f,  0.5f,
+		-0.5f,  0.5f,  0.5f,
+		-0.5f,  0.5f, -0.5f,
+	};*/
+
 	float vertices[] = {
-		-0.5f, -0.5f, -0.5f,
-		 0.5f, -0.5f, -0.5f,
-		 0.5f,  0.5f, -0.5f,
-		 0.5f,  0.5f, -0.5f,
-		-0.5f,  0.5f, -0.5f,
-		-0.5f, -0.5f, -0.5f,
+		-0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+		 0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+		 0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+		 0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+		-0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+		-0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
 
-		-0.5f, -0.5f,  0.5f,
-		 0.5f, -0.5f,  0.5f,
-		 0.5f,  0.5f,  0.5f,
-		 0.5f,  0.5f,  0.5f,
-		-0.5f,  0.5f,  0.5f,
-		-0.5f, -0.5f,  0.5f,
+		-0.5f, -0.5f,  0.5f,  0.0f,  0.0f,  1.0f,
+		 0.5f, -0.5f,  0.5f,  0.0f,  0.0f,  1.0f,
+		 0.5f,  0.5f,  0.5f,  0.0f,  0.0f,  1.0f,
+		 0.5f,  0.5f,  0.5f,  0.0f,  0.0f,  1.0f,
+		-0.5f,  0.5f,  0.5f,  0.0f,  0.0f,  1.0f,
+		-0.5f, -0.5f,  0.5f,  0.0f,  0.0f,  1.0f,
 
-		-0.5f,  0.5f,  0.5f,
-		-0.5f,  0.5f, -0.5f,
-		-0.5f, -0.5f, -0.5f,
-		-0.5f, -0.5f, -0.5f,
-		-0.5f, -0.5f,  0.5f,
-		-0.5f,  0.5f,  0.5f,
+		-0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
+		-0.5f,  0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
+		-0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
+		-0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
+		-0.5f, -0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
+		-0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
 
-		 0.5f,  0.5f,  0.5f,
-		 0.5f,  0.5f, -0.5f,
-		 0.5f, -0.5f, -0.5f,
-		 0.5f, -0.5f, -0.5f,
-		 0.5f, -0.5f,  0.5f,
-		 0.5f,  0.5f,  0.5f,
+		 0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
+		 0.5f,  0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
+		 0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
+		 0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
+		 0.5f, -0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
+		 0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
 
-		-0.5f, -0.5f, -0.5f,
-		 0.5f, -0.5f, -0.5f,
-		 0.5f, -0.5f,  0.5f,
-		 0.5f, -0.5f,  0.5f,
-		-0.5f, -0.5f,  0.5f,
-		-0.5f, -0.5f, -0.5f,
+		-0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
+		 0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
+		 0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
+		 0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
+		-0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
+		-0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
 
-		-0.5f,  0.5f, -0.5f,
-		 0.5f,  0.5f, -0.5f,
-		 0.5f,  0.5f,  0.5f,
-		 0.5f,  0.5f,  0.5f,
-		-0.5f,  0.5f,  0.5f,
-		-0.5f,  0.5f, -0.5f,
+		-0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,
+		 0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,
+		 0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
+		 0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
+		-0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
+		-0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f
 	};
+
 
 	unsigned int VBO, cubeVAO;
 	glGenVertexArrays(1, &cubeVAO);
 	glGenBuffers(1, &VBO);
+
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
 	glBindVertexArray(cubeVAO);
 
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
+
+	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
+	glEnableVertexAttribArray(1);
 	
 	// second, configure the light's VAO (VBO stays the same; the vertices are the same for the light object which is also a 3D cube)
 	unsigned int lightCubeVAO;
@@ -129,9 +178,10 @@ int main()
 	// we only need to bind to the VBO (to link it with glVertexAttribPointer), no need to fill it; the VBO's data already contains all we need (it's already bound, but we do it again for educational purposes)
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
 	
+
 	// Main window loop.
 	while (!glfwWindowShouldClose(window))
 	{
@@ -146,12 +196,13 @@ int main()
 		glfwSetScrollCallback(window, scroll_callback);
 		
 		// Set the color to be used when clear is called. This will draw a color to the screen each frame.
-		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+		glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		lightingShader.use();
 		lightingShader.setVec3("objectColor", 1.0f, 0.5f, 0.31f);
 		lightingShader.setVec3("lightColor", 1.0f, 1.0f, 1.0f);
+		lightingShader.setVec3("lightPos", lightPos);
 
 		// Use camera zoom to adjust the perspective matrix for transforming vertices.
 		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), 800.0f / 600.0f, 0.1f, 100.0f);
@@ -161,7 +212,7 @@ int main()
 
 		glm::mat4 model = glm::mat4(1.0f);
 		lightingShader.setMat4("model", model);
-
+		lightingShader.setVec3("viewPos", camera.Position);
 		glBindVertexArray(cubeVAO);
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 

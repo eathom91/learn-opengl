@@ -67,6 +67,12 @@
     <None Include="light_cube.fs">
       <Filter>Resource Files\shaders</Filter>
     </None>
+    <None Include="basic_lighting.fs">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="basic_lighting.vs">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\..\Users\eatho\Downloads\container.jpg">
