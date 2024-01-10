@@ -60,8 +60,8 @@ int main()
 
 	glEnable(GL_DEPTH_TEST);
 
-	Shader lightingShader("C:/dev/learn-opengl/learn-opengl/basic_lighting.vs",
-		"C:/dev/learn-opengl/learn-opengl/basic_lighting.fs");
+	Shader lightingShader("C:/dev/learn-opengl/learn-opengl/lighting_map.vs",
+		"C:/dev/learn-opengl/learn-opengl/lighting_map.fs");
 
 	Shader lightCubeShader("C:/dev/learn-opengl/learn-opengl/light_cube.vs",
 		"C:/dev/learn-opengl/learn-opengl/light_cube.fs");
@@ -201,8 +201,26 @@ int main()
 
 		lightingShader.use();
 		lightingShader.setVec3("objectColor", 1.0f, 0.5f, 0.31f);
-		lightingShader.setVec3("lightColor", 1.0f, 1.0f, 1.0f);
+		/*lightingShader.setVec3("lightColor", 1.0f, 1.0f, 1.0f);*/
+		glm::vec3 lightColor;
+		lightColor.x = sin(glfwGetTime() * 2.0f);
+		lightColor.y = sin(glfwGetTime() * 0.7f);
+		lightColor.z = sin(glfwGetTime() * 1.3f);
+
+		glm::vec3 diffuseColor = lightColor * glm::vec3(0.5f);
+		glm::vec3 ambientColor = diffuseColor * glm::vec3(0.2f);
+		lightingShader.setVec3("light.ambient", ambientColor);
+		lightingShader.setVec3("light.diffuse", diffuseColor);
+		//lightingShader.setVec3("light.ambient", 0.2f, 0.2f, 0.2f);
+		//lightingShader.setVec3("light.diffuse", 0.5f, 0.5f, 0.5f); // darkened
+		lightingShader.setVec3("light.specular", 1.0f, 1.0f, 1.0f);
 		lightingShader.setVec3("lightPos", lightPos);
+
+		lightingShader.setVec3("material.ambient", 1.0f, 0.5f, 0.31f);
+		lightingShader.setVec3("material.diffuse", 1.0f, 0.5f, 0.31f);
+		lightingShader.setVec3("material.specular", 0.5f, 0.5f, 0.5f);
+		lightingShader.setFloat("material.shininess", 32.0f);
+
 
 		// Use camera zoom to adjust the perspective matrix for transforming vertices.
 		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), 800.0f / 600.0f, 0.1f, 100.0f);

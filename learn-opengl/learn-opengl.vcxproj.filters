@@ -19,6 +19,12 @@
     <Filter Include="Resource Files\shaders">
       <UniqueIdentifier>{fd41f059-aaa1-4fd2-9ce5-10858f3eb7b1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\shaders\materials">
+      <UniqueIdentifier>{1ad22d15-8ce1-4897-895d-84c4e7feb796}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\shaders\lighting_maps">
+      <UniqueIdentifier>{e352b797-8104-45ab-9582-8d4cc30be3cd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Users\eatho\Downloads\glad\src\glad.c">
@@ -73,12 +79,33 @@
     <None Include="basic_lighting.vs">
       <Filter>Resource Files\shaders</Filter>
     </None>
+    <None Include="materials.fs">
+      <Filter>Resource Files\shaders\materials</Filter>
+    </None>
+    <None Include="materials.vs">
+      <Filter>Resource Files\shaders\materials</Filter>
+    </None>
+    <None Include="light_cube_materials.vs">
+      <Filter>Resource Files\shaders\materials</Filter>
+    </None>
+    <None Include="light_cube_materials.fs">
+      <Filter>Resource Files\shaders\materials</Filter>
+    </None>
+    <None Include="lighting_map.vs">
+      <Filter>Resource Files\shaders\lighting_maps</Filter>
+    </None>
+    <None Include="lighting_map.fs">
+      <Filter>Resource Files\shaders\lighting_maps</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\..\Users\eatho\Downloads\container.jpg">
       <Filter>Resource Files\textures</Filter>
     </Image>
     <Image Include="..\..\..\Users\eatho\Downloads\awesomeface.png">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="..\..\..\Users\eatho\Downloads\container2.png">
       <Filter>Resource Files\textures</Filter>
     </Image>
   </ItemGroup>

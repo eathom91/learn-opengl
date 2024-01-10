@@ -149,10 +149,16 @@
   <ItemGroup>
     <None Include="basic_lighting.fs" />
     <None Include="basic_lighting.vs" />
+    <None Include="lighting_map.fs" />
+    <None Include="lighting_map.vs" />
+    <None Include="light_cube_materials.fs" />
+    <None Include="light_cube_materials.vs" />
+    <None Include="materials.vs" />
     <None Include="colors.fs" />
     <None Include="colors.vs" />
     <None Include="light_cube.fs" />
     <None Include="light_cube.vs" />
+    <None Include="materials.fs" />
     <None Include="shader.fs" />
     <None Include="shader.vs" />
     <None Include="texture.fs" />
@@ -161,6 +167,7 @@
   <ItemGroup>
     <Image Include="..\..\..\Users\eatho\Downloads\awesomeface.png" />
     <Image Include="..\..\..\Users\eatho\Downloads\container.jpg" />
+    <Image Include="..\..\..\Users\eatho\Downloads\container2.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
