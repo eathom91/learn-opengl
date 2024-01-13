@@ -25,6 +25,15 @@
     <Filter Include="Resource Files\shaders\lighting_maps">
       <UniqueIdentifier>{e352b797-8104-45ab-9582-8d4cc30be3cd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\shaders\light_casters">
+      <UniqueIdentifier>{25e21f82-4329-418f-a794-e33aab18e942}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\shaders\multiple_lights">
+      <UniqueIdentifier>{62b05d2c-e936-4500-b6f4-59c49abd70b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\shaders\model_loading">
+      <UniqueIdentifier>{7ca444b6-5692-49e3-990c-a7bd507c4f28}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Users\eatho\Downloads\glad\src\glad.c">
@@ -39,12 +48,21 @@
     <ClCompile Include="stb_image.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Shader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -97,6 +115,24 @@
     <None Include="lighting_map.fs">
       <Filter>Resource Files\shaders\lighting_maps</Filter>
     </None>
+    <None Include="light_casters.vs">
+      <Filter>Resource Files\shaders\light_casters</Filter>
+    </None>
+    <None Include="light_casters.fs">
+      <Filter>Resource Files\shaders\light_casters</Filter>
+    </None>
+    <None Include="multiple_lights.fs">
+      <Filter>Resource Files\shaders\multiple_lights</Filter>
+    </None>
+    <None Include="multiple_lights.vs">
+      <Filter>Resource Files\shaders\multiple_lights</Filter>
+    </None>
+    <None Include="model_loading.vs">
+      <Filter>Resource Files\shaders\model_loading</Filter>
+    </None>
+    <None Include="model_loading.fs">
+      <Filter>Resource Files\shaders\model_loading</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\..\Users\eatho\Downloads\container.jpg">
@@ -106,6 +142,9 @@
       <Filter>Resource Files\textures</Filter>
     </Image>
     <Image Include="..\..\..\Users\eatho\Downloads\container2.png">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="..\..\..\Users\eatho\Downloads\container2_specular.png">
       <Filter>Resource Files\textures</Filter>
     </Image>
   </ItemGroup>
