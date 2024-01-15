@@ -34,6 +34,18 @@
     <Filter Include="Resource Files\shaders\model_loading">
       <UniqueIdentifier>{7ca444b6-5692-49e3-990c-a7bd507c4f28}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\shaders\basic_lighting">
+      <UniqueIdentifier>{e145b6f1-0737-4be8-9abb-044371a69600}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\shaders\colors">
+      <UniqueIdentifier>{482b0ea6-8501-47e6-ad5f-0c039cf4f7eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\shaders\light_cube">
+      <UniqueIdentifier>{4d115d6c-97f1-4220-be45-bd06e1d9b116}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\shaders\depth_testing">
+      <UniqueIdentifier>{e89effbf-a958-46a4-9907-1dc095bef3bd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Users\eatho\Downloads\glad\src\glad.c">
@@ -49,6 +61,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DepthTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -77,24 +92,6 @@
       <Filter>Resource Files\shaders</Filter>
     </None>
     <None Include="texture.vs">
-      <Filter>Resource Files\shaders</Filter>
-    </None>
-    <None Include="colors.vs">
-      <Filter>Resource Files\shaders</Filter>
-    </None>
-    <None Include="colors.fs">
-      <Filter>Resource Files\shaders</Filter>
-    </None>
-    <None Include="light_cube.vs">
-      <Filter>Resource Files\shaders</Filter>
-    </None>
-    <None Include="light_cube.fs">
-      <Filter>Resource Files\shaders</Filter>
-    </None>
-    <None Include="basic_lighting.fs">
-      <Filter>Resource Files\shaders</Filter>
-    </None>
-    <None Include="basic_lighting.vs">
       <Filter>Resource Files\shaders</Filter>
     </None>
     <None Include="materials.fs">
@@ -133,6 +130,33 @@
     <None Include="model_loading.fs">
       <Filter>Resource Files\shaders\model_loading</Filter>
     </None>
+    <None Include="basic_lighting.vs">
+      <Filter>Resource Files\shaders\basic_lighting</Filter>
+    </None>
+    <None Include="basic_lighting.fs">
+      <Filter>Resource Files\shaders\basic_lighting</Filter>
+    </None>
+    <None Include="colors.vs">
+      <Filter>Resource Files\shaders\colors</Filter>
+    </None>
+    <None Include="colors.fs">
+      <Filter>Resource Files\shaders\colors</Filter>
+    </None>
+    <None Include="light_cube.vs">
+      <Filter>Resource Files\shaders\light_cube</Filter>
+    </None>
+    <None Include="light_cube.fs">
+      <Filter>Resource Files\shaders\light_cube</Filter>
+    </None>
+    <None Include="depth_testing.vs">
+      <Filter>Resource Files\shaders\depth_testing</Filter>
+    </None>
+    <None Include="depth_testing.fs">
+      <Filter>Resource Files\shaders\depth_testing</Filter>
+    </None>
+    <None Include="depth_testing_non_linear.fs">
+      <Filter>Resource Files\shaders\depth_testing</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\..\Users\eatho\Downloads\container.jpg">
@@ -145,6 +169,12 @@
       <Filter>Resource Files\textures</Filter>
     </Image>
     <Image Include="..\..\..\Users\eatho\Downloads\container2_specular.png">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="metal.png">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="marble.jpg">
       <Filter>Resource Files\textures</Filter>
     </Image>
   </ItemGroup>
