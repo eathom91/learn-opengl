@@ -66,6 +66,9 @@
     <ClCompile Include="DepthTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DepthTestWithOutline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Shader.h">
@@ -156,6 +159,9 @@
     </None>
     <None Include="depth_testing_non_linear.fs">
       <Filter>Resource Files\shaders\depth_testing</Filter>
+    </None>
+    <None Include="outline.fs">
+      <Filter>Resource Files\shaders</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
