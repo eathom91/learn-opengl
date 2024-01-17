@@ -55,6 +55,9 @@
     <Filter Include="Resource Files\shaders\blending2">
       <UniqueIdentifier>{8b10b4ce-e5ae-4f66-a8fb-15706e3e634f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\shaders\framebuffers">
+      <UniqueIdentifier>{49792dfe-fff8-486b-9c8b-37e3bd1d416c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Users\eatho\Downloads\glad\src\glad.c">
@@ -85,6 +88,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Blending2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Framebuffers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -198,6 +204,18 @@
     </None>
     <None Include="blending2.fs">
       <Filter>Resource Files\shaders\blending2</Filter>
+    </None>
+    <None Include="framebuffers.vs">
+      <Filter>Resource Files\shaders\framebuffers</Filter>
+    </None>
+    <None Include="framebuffers.fs">
+      <Filter>Resource Files\shaders\framebuffers</Filter>
+    </None>
+    <None Include="framebuffers_screen.vs">
+      <Filter>Resource Files\shaders\framebuffers</Filter>
+    </None>
+    <None Include="framebuffers_screen.fs">
+      <Filter>Resource Files\shaders\framebuffers</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

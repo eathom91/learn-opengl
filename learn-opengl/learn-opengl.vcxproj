@@ -143,6 +143,7 @@
     <ClCompile Include="Blending2.cpp" />
     <ClCompile Include="DepthTest.cpp" />
     <ClCompile Include="DepthTestWithOutline.cpp" />
+    <ClCompile Include="Framebuffers.cpp" />
     <ClCompile Include="InstancingQuads.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="stb_image.cpp" />
@@ -164,6 +165,10 @@
     <None Include="depth_testing.fs" />
     <None Include="depth_testing.vs" />
     <None Include="depth_testing_non_linear.fs" />
+    <None Include="framebuffers.fs" />
+    <None Include="framebuffers.vs" />
+    <None Include="framebuffers_screen.fs" />
+    <None Include="framebuffers_screen.vs" />
     <None Include="instancing.fs" />
     <None Include="instancing.vs" />
     <None Include="lighting_map.fs" />
