@@ -139,8 +139,11 @@
   <ItemGroup>
     <ClCompile Include="..\..\..\Users\eatho\Downloads\glad\src\glad.c" />
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Blending.cpp" />
+    <ClCompile Include="Blending2.cpp" />
     <ClCompile Include="DepthTest.cpp" />
     <ClCompile Include="DepthTestWithOutline.cpp" />
+    <ClCompile Include="InstancingQuads.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="stb_image.cpp" />
     <ClCompile Include="Shader.cpp" />
@@ -154,9 +157,15 @@
   <ItemGroup>
     <None Include="basic_lighting.fs" />
     <None Include="basic_lighting.vs" />
+    <None Include="blending.fs" />
+    <None Include="blending.vs" />
+    <None Include="blending2.fs" />
+    <None Include="blending2.vs" />
     <None Include="depth_testing.fs" />
     <None Include="depth_testing.vs" />
     <None Include="depth_testing_non_linear.fs" />
+    <None Include="instancing.fs" />
+    <None Include="instancing.vs" />
     <None Include="lighting_map.fs" />
     <None Include="lighting_map.vs" />
     <None Include="light_casters.fs" />
@@ -184,8 +193,10 @@
     <Image Include="..\..\..\Users\eatho\Downloads\container.jpg" />
     <Image Include="..\..\..\Users\eatho\Downloads\container2.png" />
     <Image Include="..\..\..\Users\eatho\Downloads\container2_specular.png" />
+    <Image Include="grass.png" />
     <Image Include="marble.jpg" />
     <Image Include="metal.png" />
+    <Image Include="window.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

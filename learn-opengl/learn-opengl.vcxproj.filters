@@ -46,6 +46,15 @@
     <Filter Include="Resource Files\shaders\depth_testing">
       <UniqueIdentifier>{e89effbf-a958-46a4-9907-1dc095bef3bd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\shaders\instancing_quads">
+      <UniqueIdentifier>{67f52e45-cfa9-4e4d-bc4d-4b1d12c3483c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\shaders\blending">
+      <UniqueIdentifier>{136d64e0-0b09-4e05-bf70-de9a5138d971}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\shaders\blending2">
+      <UniqueIdentifier>{8b10b4ce-e5ae-4f66-a8fb-15706e3e634f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Users\eatho\Downloads\glad\src\glad.c">
@@ -67,6 +76,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DepthTestWithOutline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InstancingQuads.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Blending.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Blending2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -163,6 +181,24 @@
     <None Include="outline.fs">
       <Filter>Resource Files\shaders</Filter>
     </None>
+    <None Include="instancing.vs">
+      <Filter>Resource Files\shaders\instancing_quads</Filter>
+    </None>
+    <None Include="instancing.fs">
+      <Filter>Resource Files\shaders\instancing_quads</Filter>
+    </None>
+    <None Include="blending.vs">
+      <Filter>Resource Files\shaders\blending</Filter>
+    </None>
+    <None Include="blending.fs">
+      <Filter>Resource Files\shaders\blending</Filter>
+    </None>
+    <None Include="blending2.vs">
+      <Filter>Resource Files\shaders\blending2</Filter>
+    </None>
+    <None Include="blending2.fs">
+      <Filter>Resource Files\shaders\blending2</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\..\Users\eatho\Downloads\container.jpg">
@@ -181,6 +217,12 @@
       <Filter>Resource Files\textures</Filter>
     </Image>
     <Image Include="marble.jpg">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="grass.png">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="window.png">
       <Filter>Resource Files\textures</Filter>
     </Image>
   </ItemGroup>
